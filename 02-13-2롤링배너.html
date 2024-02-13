@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        *{margin: 0; padding: 0; box-sizing: border-box;}
+        li,ul{list-style: none;}
+        a{text-decoration: none; color: inherit;}
+        body{
+            overflow-x: hidden;
+        }
+        .img_rolling{
+            width: 300%;
+            position: absolute;
+            top: 0; left: 0;
+            border: 1px solid red;
+            display: flex;
+            justify-content: space-between;
+            animation: move 30s linear infinite forwards;
+            /* forwards 1만 애니메이션 돌아가도록 */
+        }
+
+        .img_rolling li{
+            border: 1px solid blue;
+            padding: 10px 10px;
+        }
+        @keyframes move{
+            0%{transform: translateX(0);}
+            50%{transform: translateX(-100%);}
+            50.1%{transform: translateX(100%);}
+            100%{transform: translateX(0);}
+        }
+        .box{
+            margin: 100px;
+            
+        }
+
+
+        
+    </style>
+</head>
+<body>
+    <ul class="img_rolling">
+        <!-- ax태그 안에 img 태그 넣어도 됨! -->
+        <li><a href="#">11111</a></li>
+        <li><a href="#">22222222</a></li>
+        <li><a href="#">33333333333</a></li>
+        <li><a href="#">44444</a></li>
+        <li><a href="#">555555555</a></li>
+    </ul>
+
+    <marquee class="box" scrollamount="5" direction="right" behavior="alternate">
+        <!-- alternate: 좌우 왔다갔다 -->
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Velit, sed, dolor delectus dolorem doloremque
+        voluptates asperiores, adipisci soluta est ut repellat ratione vitae autem dicta ullam. Nisi placeat voluptatum
+        possimus.
+    </marquee>
+</body>
+</html>

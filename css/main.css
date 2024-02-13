@@ -58,13 +58,14 @@ body{
     left: 150px; top: 0;
     /* 바디로 떨어지거든, main>li 에 릴리티브 걸어주기 */
     width: 1920px;
-    background-color: rgba(255,255,255,.3);
+    background-color: rgba(0,0,0,.5);
     display: none;
     z-index: 10;
 }
 .sub li{
     /* 플롯이나 플렉스로 잡아도 노상관 */
-    float: left;    
+    float: left;
+    margin-right: 20px;
 }
 .sub li a{
     display: block;
@@ -72,10 +73,13 @@ body{
     height: 50px;
     line-height: 50px;
     text-align: center;
-    background-color: #968b8b;
+    /* background-color: #968b8b; */
+    color: #fff;
 }
 .sub li a:hover{
     background-color: rgba(255,255,255,.5);
+    color: black;
+    
 }
 
 .container{
@@ -154,15 +158,15 @@ body{
     display: flex;
 }
 .contents > div{
-    /* 공지+갤러리 제목 동시에 셀렉 */
+    /* 공지+갤러리 제목(구조) 동시에 셀렉 */
     position: relative;
     width: 50%;
     height: 250px;
 }
 .contents h2{
-      /* 공지+갤러리 제목 동시에 셀렉 */
+      /* 공지+갤러리 제목(글자) 동시에 셀렉 */
     position: absolute;
-    top: 0; left: 1%;
+    top: 0; left: 3%;
 
     font-size: 14px;
     width: 100px;
@@ -172,6 +176,8 @@ body{
     border: 1px solid red;
     background-color: #f1f1f1;
     border-bottom-color:#f1f1f1;
+    border-radius: 10px 10px 0 0;
+    
     z-index: 5;
 }
 .contents ul{
@@ -265,16 +271,21 @@ body{
 .f_2_up{
     height: 60px;
     text-align: center;
-    margin-top: 20px;
-    
+    padding: 20px;
 }
+
+.f_2_up a:last-child{
+    border-right: none;
+}
+
 .f_2_up a:hover{text-decoration: underline; color: purple;}
 
 .f_2_up a{
     text-align: center;
     border-right: 1px solid black;
+    padding: 0 5px;
 }
-.f_2_up a:last-child{display: none;}
+
 .f_2_down{
     height: 60px;
     font-size: 12px;

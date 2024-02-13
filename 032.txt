@@ -1,0 +1,15 @@
+2024-02-13
+cmd / 소스트리
+
+0) cd 폴더명 , cd 폴더명2
+1) git init = 크리에이트 폴더연결
+2) git add all , git add -A
+3) git comit -m "커밋설명쓰기" >엔터키
+4) git remote origin
+5) git push
+
+업데이트는 3번부터
+
+ㅁ 리셋파일 하나 만들어놓기
+
+
